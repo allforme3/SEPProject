@@ -1,9 +1,8 @@
 #pragma once
-#define MAX_SIZE 258
 #include "Treatment.h"
+#define MAX_SIZE 258
 class Patient
 {
-	
 private:
 	int PatientID;
 	char PatientName[MAX_SIZE];
@@ -15,7 +14,7 @@ private:
 	char Email[MAX_SIZE];
 	char TelNo[MAX_SIZE];
 	char DOB[11];
-	char NHSNumber[MAX_SIZE];
+	int NHSNumber;
 	bool Gender;
 	char PatientDoctor[MAX_SIZE];
 	char SurgeryName[MAX_SIZE];
@@ -30,17 +29,34 @@ private:
 	char InitialTreatStrategy[MAX_SIZE];
 	Treatment** PreviousTreatments;
 	char BillingInfo[MAX_SIZE];
+
 public:
 	Patient();
 	~Patient();
-private:
 	void returnPatientName(char*);
 	void returnPatientAddress(char*);
 	bool changePatientAddress(char*, char*, char*);
 	bool changePatientName(char*);
 	void returnIntTreatmentStrat(char*);
 	bool saveConsentForm(char*);
-	void returnNHSNumber(char*);
+	void returnConsentForm(char*);
+	int returnNHSNumber();
+	void setNHSNumber(int);
 	void returnPatientEmail(char*);
+	bool getGender();
+	void setGender(bool);
+	void setEmail(char*);
+	void setIntTreatmentStrat(char*);
+	void setDOB(char*);
+	void getDOB(char*);
+	void setCity(char*);
+	void getCity(char*);
+	void getPostcode(char*);
+	void setPostcode(char*);
+	int returnPatientId();
+	void setPatientId(int);
+	void returnMedicalHistory(char**);
+	void setMedicalHistory(char**);
 };
+
 

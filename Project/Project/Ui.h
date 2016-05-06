@@ -1,8 +1,8 @@
 #pragma once
-class UI
+class Ui
 {
 public:
-	UI();
-	~UI();
+	Ui();
+	~Ui();
 };
 

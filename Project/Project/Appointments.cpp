@@ -1,5 +1,5 @@
+#include "stdafx.h"
 #include "Appointments.h"
-
 
 
 Appointments::Appointments()
